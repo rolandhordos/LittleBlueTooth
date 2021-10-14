@@ -53,7 +53,7 @@ public struct LittleBlueToothCharacteristic: Identifiable {
         guard let service = characteristic.service else {
             fatalError("There must be a service associated to the characteristic")
         }
-#elseif ((os(iOS) && !targetEnvironment(macCatalyst)) || os(tvOS) || os(watchOS)) && swift(>=5.5)
+#elseif ((os(iOS) && !targetEnvironment(macCatalyst)) || os(macOS) || os(tvOS) || os(watchOS)) && swift(>=5.5)
         guard let service = characteristic.service else {
             fatalError("There must be a service associated to the characteristic")
         }
