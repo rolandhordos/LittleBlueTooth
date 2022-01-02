@@ -935,7 +935,7 @@ public class LittleBlueTooth: Identifiable {
                     prom(.success(state))
                     self.removeAndCancelSubscriber(for: futKey)
                 }
-                .store(in: &self.disposeBag, for: futKey)
+                .store(in: &self.disposeBag, for: UUID())
             }
         }
         return future.eraseToAnyPublisher()
